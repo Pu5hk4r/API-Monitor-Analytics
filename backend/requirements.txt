@@ -1,0 +1,27 @@
+# FastAPI and server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Pydantic for validation
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Firebase Admin SDK
+firebase-admin==6.4.0
+
+# Google Cloud and Gemini
+google-generativeai==0.3.2
+google-cloud-logging==3.9.0
+
+# HTTP client
+httpx==0.26.0
+
+# Scheduling
+APScheduler==3.10.4
+
+# Environment variables
+python-dotenv==1.0.0
+
+# CORS
+python-jose[cryptography]==3.3.0
