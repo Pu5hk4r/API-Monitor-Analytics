@@ -1,6 +1,9 @@
 # 🔍 API Monitor System
 
 A production-ready, real-time API monitoring and alerting system built with FastAPI, React, Firebase, and Google Cloud.
+![Dashboard](https://github.com/Pu5hk4r/API-Monitor-Analytics/blob/main/APIMonitorAnalytics_dashboard.png)
+![ALert1](https://github.com/Pu5hk4r/API-Monitor-Analytics/blob/main/APIMonitorAnalytics_dashboard.png)
+![Alert2](https://github.com/Pu5hk4r/API-Monitor-Analytics/blob/main/API_Monitor_mini.png)
 
 ![Architecture](https://img.shields.io/badge/Architecture-Microservices-blue)
 ![Python](https://img.shields.io/badge/Python-3.11-green)
