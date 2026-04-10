@@ -1,5 +1,5 @@
 # 🔍 API Monitor System
-[Architecture](https://github.com/Pu5hk4r/API-Monitor-Analytics/blob/main/API-Analytics-Architecture.png)
+![Architecture](https://github.com/Pu5hk4r/API-Monitor-Analytics/blob/main/API-Analytics-Architecture.png)
 
 A production-ready, real-time API monitoring and alerting system built with FastAPI, React, Firebase, and Google Cloud.
 ![Dashboard](https://github.com/Pu5hk4r/API-Monitor-Analytics/blob/main/APIMonitorAnalytics_dashboard.png)
