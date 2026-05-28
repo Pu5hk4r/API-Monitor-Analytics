@@ -50,6 +50,7 @@ dist/
 *.db
 *.sqlite
 *.sqlite3
+backend/database/
 
 # Secrets
 secrets/

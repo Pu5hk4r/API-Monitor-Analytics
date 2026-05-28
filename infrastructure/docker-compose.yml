@@ -21,7 +21,7 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ../backend
       dockerfile: Dockerfile
     container_name: api-monitor-backend
     environment:
@@ -41,7 +41,7 @@ services:
     volumes:
       - sqlite_data:/app/database
       - app_logs:/var/log/app
-      - firebase_secrets:/app/secrets:ro
+      - ../backend/secrets:/app/secrets:ro
     networks:
       - api-monitor-network
     restart: unless-stopped
@@ -69,8 +69,6 @@ volumes:
   app_logs:
     driver: local
   nginx_logs:
-    driver: local
-  firebase_secrets:
     driver: local
 
 networks:

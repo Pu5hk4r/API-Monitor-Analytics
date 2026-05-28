@@ -8,6 +8,7 @@ from typing import Optional, Dict, Any
 import logging
 import os
 
+from datetime import datetime
 from app.core.config import settings
 
 logger = logging.getLogger(__name__)
@@ -140,7 +141,12 @@ class FirestoreService:
             monitor_data['created_at'] = firestore.SERVER_TIMESTAMP
             monitor_data['updated_at'] = firestore.SERVER_TIMESTAMP
             doc_ref.set(monitor_data)
-            return {'id': doc_ref.id, **monitor_data}
+            
+            response_data = monitor_data.copy()
+            now = datetime.utcnow()
+            response_data['created_at'] = now
+            response_data['updated_at'] = now
+            return {'id': doc_ref.id, **response_data}
         except Exception as e:
             logger.error(f"Failed to create monitor: {str(e)}")
             raise
@@ -172,7 +178,10 @@ class FirestoreService:
             doc_ref = self.db.collection('alerts').document()
             alert_data['created_at'] = firestore.SERVER_TIMESTAMP
             doc_ref.set(alert_data)
-            return {'id': doc_ref.id, **alert_data}
+            
+            response_data = alert_data.copy()
+            response_data['created_at'] = datetime.utcnow()
+            return {'id': doc_ref.id, **response_data}
         except Exception as e:
             logger.error(f"Failed to create alert: {str(e)}")
             raise
